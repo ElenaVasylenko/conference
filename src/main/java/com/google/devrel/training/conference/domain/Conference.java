@@ -17,11 +17,15 @@ import com.googlecode.objectify.annotation.Parent;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import com.googlecode.objectify.annotation.Cache;
+import com.google.appengine.api.memcache.MemcacheService; 
+import com.google.appengine.api.memcache.MemcacheServiceFactory;
 
 /**
  * Conference class stores conference information.
  */
 @Entity
+@Cache
 public class Conference {
 
     private static final String DEFAULT_CITY = "Default City";
